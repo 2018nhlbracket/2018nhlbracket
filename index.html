@@ -1,53 +1,258 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<style>
+* {
+    box-sizing: border-box;
+}
 
-  <head>
+body {
+    margin: 0;
+    font-family: Arial;
+}
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+.header {
+    text-align: center;
+    padding: 32px;
+}
+.container {
+  margin:auto;
+  width: 950px;
+  height:807px;
+}
 
-    <title>NHL Playoff Bracket</title>
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+/* Create four equal columns that sits next to each other */
+.column {
+    -ms-flex: 7%; /* IE10 */
+    flex: 7%;
+    max-width: 7%;
+    padding: 0 4px;
+}
+.column1 {
+    -ms-flex: 15%; /* IE10 */
+    flex: 15%;
+    max-width: 8%;
+    padding: 0 4px;
+    margin-left: 55px;
+}
+.column2 {
+    -ms-flex: 15%; /* IE10 */
+    flex: 15%;
+    max-width: 8%;
+    padding: 0 4px;
+    margin-left: 18px;
+}
+.column3 {
+    -ms-flex: 15%; /* IE10 */
+    flex: 15%;
+    max-width: 8%;
+    padding: 0 4px;
+    margin-left: 34px;
+}
+.column4 {
+    -ms-flex: 15%; /* IE10 */
+    flex: 15%;
+    max-width: 8%;
+    padding: 0 4px;
+    margin-left: 38px;
+}
+.column5 {
+    -ms-flex: 15%; /* IE10 */
+    flex: 15%;
+    max-width: 8%;
+    padding: 0 4px;
+    margin-left: 48px;
+}
+.column6 {
+    -ms-flex: 15%; /* IE10 */
+    flex: 15%;
+    max-width: 8%;
+    padding: 0 4px;
+    margin-left: 38px;
+}
+.column7 {
+    -ms-flex: 15%; /* IE10 */
+    flex: 15%;
+    max-width: 8%;
+    padding: 0 4px;
+    margin-left: 34px;
+}
+.column8 {
+    -ms-flex: 15%; /* IE10 */
+    flex: 15%;
+    max-width: 8%;
+    padding: 0 4px;
+    margin-left: 18px;
+}
 
-    <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="css/main.css">
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
 
-  </head>
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
 
-  <body>
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+.container .btn {
+  position: absolute;
+  top: 750px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 5px 8px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
 
-    <!-- Page Content -->
-    <div class="container background bg-pad text-center">
-          <img src="img/background.png">
-          <div class="container team p1">
-            <p>test</p>
-          </div>
-          <div class="container team p2"></div>
-          <div class="container team p3"></div>
-          <div class="container team c1"></div>
-          <div class="container team c2"></div>
-          <div class="container team c3"></div>
-          <div class="container team wwc"></div>
-          <div class="container team wwc2"></div>
-          <div class="container team a1"></div>
-          <div class="container team a2"></div>
-          <div class="container team a3"></div>
-          <div class="container team m1"></div>
-          <div class="container team m2"></div>
-          <div class="container team m3"></div>
-          <div class="container team ewc1"></div>
-          <div class="container team ewc2"></div> 
+.container .btn:hover {
+  background-color: black;
+}
+</style>
+<body>
+
+<!-- Header -->
+
+<!-- Photo Grid -->
+<div class="container" style="background-image: url('background.png');">
+  <div class="row"> 
+    <div class="column1">
+      <a onclick="showImage(this)" id= "wc1" href=#logos/np_logo.png data-href = "logos/np_logo.png"><img src="logos/np_logo.png" style="width:100%;margin-top: 27px;"></a>
+      <a onclick="showImage(this)" id= "wc2" href=#logos/ca_logo.png data-href = "logos/ca_logo.png"><img src="logos/ca_logo.png" style="width:100%;margin-top: 29px;"></a>
+      <a onclick="showImage(this)" id= "wc3" href=#logos/wj_logo.png data-href = "logos/wj_logo.png"><img src="logos/wj_logo.png" style="width:100%;margin-top: 10px;"></a>
+      <a onclick="showImage(this)" id= "wc4" href=#logos/mw_logo.png data-href = "logos/mw_logo.png"><img src="logos/mw_logo.png" style="width:100%;margin-top: 28px;"></a>
+      <a onclick="showImage(this)" id= "wc5" href=#logos/vk_logo.png data-href = "logos/vk_logo.png"><img src="logos/vk_logo.png" style="width:100%;margin-top: 42px;"></a>     
+      <a onclick="showImage(this)" id= "wc6" href=#logos/lk_logo.png data-href = "logos/lk_logo.png"><img src="logos/lk_logo.png" style="width:100%;margin-top: 30px;"></a>
+      <a onclick="showImage(this)" id= "wc7" href=#logos/ad_logo.png data-href = "logos/ad_logo.png"><img src="logos/ad_logo.png" style="width:100%;margin-top: 6px;"></a>
+      <a onclick="showImage(this)" id= "wc8" href=#logos/ss_logo.png data-href = "logos/ss_logo.png"><img src="logos/ss_logo.png" style="width:100%;margin-top: 30px;"></a>
     </div>
+    <div class="column2">
+      <div id="wcsf1" style="width:100%;margin-top: 80px;height:67px;"></div>
+      <div id="wcsf2" style="width:100%;margin-top: 106px;height:67px;"></div>
+      <div id="wcsf3" style="width:100%;margin-top: 142px;height:67px;"></div>
+      <div id="wcsf4" style="width:100%;margin-top: 106px;height:67px;"></div>
+    </div>  
+    <div class="column3"> 
+      <div id="wcf1" style="width:100%;margin-top: 168px;height:67px;"></div>
+      <div id="wcf2" style="width:100%;margin-top: 320px;height:67px;"></div>
+    </div>
+    <div class="column4">
+      <div id="scf1" style="width:100%;margin-top: 365px;height:67px;"></div>
+    </div>
+    <div class="column5">
+      <div id="scf2" style="width:100%;margin-top: 365px;height:67px;"></div>
+    </div>
+    <div class="column6">
+      <div id="ecf1" style="width:100%;margin-top: 168px;height:67px;"></div>
+      <div id="ecf2" style="width:100%;margin-top: 320px;height:67px;"></div>
+    </div>
+    <div class="column7">
+      <div id="ecsf1" style="width:100%;margin-top: 80px;height:67px;"></div>
+      <div id="ecsf2" style="width:100%;margin-top: 106px;height:67px;"></div>
+      <div id="ecsf3" style="width:100%;margin-top: 142px;height:67px;"></div>
+      <div id="ecsf4" style="width:100%;margin-top: 106px;height:67px;"></div>
+    </div>
+    <div class="column8">
+      <a onclick="showImage(this)" id= "ec1" href=#logos/tl_logo.png data-href = "logos/tl_logo.png"><img src="logos/tl_logo.png" style="width:100%;margin-top: 27px;"></a>
+      <a onclick="showImage(this)" id= "ec2" href=#logos/nd_logo.png data-href = "logos/nd_logo.png"><img src="logos/nd_logo.png" style="width:100%;margin-top: 29px;"></a>
+      <a onclick="showImage(this)" id= "ec3" href=#logos/bb_logo.png data-href = "logos/bb_logo.png"><img src="logos/bb_logo.png" style="width:100%;margin-top: 10px;"></a>
+      <a onclick="showImage(this)" id= "ec4" href=#logos/tml_logo.png data-href = "logos/tml_logo.png"><img src="logos/tml_logo.png" style="width:100%;margin-top: 28px;"></a>
+      <a onclick="showImage(this)" id= "ec5" href=#logos/wc_logo.png data-href = "logos/wc_logo.png"><img src="logos/wc_logo.png" style="width:100%;margin-top: 42px;"></a>     
+      <a onclick="showImage(this)" id= "ec6" href=#logos/cbj_logo.png data-href = "logos/cbj_logo.png"><img src="logos/cbj_logo.png" style="width:100%;margin-top: 30px;"></a>
+      <a onclick="showImage(this)" id= "ec7" href=#logos/pp_logo.png data-href = "logos/pp_logo.png"><img src="logos/pp_logo.png" style="width:100%;margin-top: 6px;"></a>
+      <a onclick="showImage(this)" id= "ec8" href=#logos/pf_logo.png data-href = "logos/pf_logo.png"><img src="logos/pf_logo.png" style="width:100%;margin-top: 30px;"></a>
+    </div>
+    <button class="btn">Submit</button>
+  </div>
+</div>
+<script>
+function showImage(link)
+{
+    if (link.id == 'wc1' || link.id == 'wc2') {
+        var spot = wcsf1
+        var next = 'wcsf1'
+    }
+    if (link.id == 'wc3' || link.id == 'wc4') {
+        var spot = wcsf2
+        var next = 'wcsf2'
+    }
+    if (link.id == 'wc5' || link.id == 'wc6') {
+        var spot = wcsf3
+        var next = 'wcsf3'
+    }
+    if (link.id == 'wc7' || link.id == 'wc8') {
+        var spot = wcsf4
+        var next = 'wcsf4'
+    }
+    if (link.id == 'ec1' || link.id == 'ec2') {
+        var spot = ecsf1
+        var next = 'ecsf1'
+    }
+    if (link.id == 'ec3' || link.id == 'ec4') {
+        var spot = ecsf2
+        var next = 'ecsf2'
+    }
+    if (link.id == 'ec5' || link.id == 'ec6') {
+        var spot = ecsf3
+        var next = 'ecsf3'
+    }
+    if (link.id == 'ec7' || link.id == 'ec8') {
+        var spot = ecsf4
+        var next = 'ecsf4'
+    }
+    if (link.id == 'wcsf1' || link.id == 'wcsf2') {
+        var spot = wcf1
+        var next = 'wcf1'
+    }
+    if (link.id == 'wcsf3' || link.id == 'wcsf4') {
+        var spot = wcf2
+        var next = 'wcf2'
+    }
+    if (link.id == 'ecsf1' || link.id == 'ecsf2') {
+        var spot = ecf1
+        var next = 'ecf1'
+    }
+    if (link.id == 'ecsf3' || link.id == 'ecsf4') {
+        var spot = ecf2
+        var next = 'ecf2'
+    }
+    if (link.id == 'wcf1' || link.id == 'wcf2') {
+        var spot = scf1
+        var next = 'scf1'
+    }
+    if (link.id == 'ecf1' || link.id == 'ecf2') {
+        var spot = scf2
+        var next = 'scf2'
+    }
 
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  </body>
-
+    var url = link.href;
+    url = url.substr(url.indexOf('#')+1);
+    spot.innerHTML = '<a onclick="showImage(this)" id="' + next + '"' + 'href="#'+ url + '" data-href="'+url+'" ><img src="'+url+'"' + ' style="width:67px "></a>';
+}
+</script>
+</body>
 </html>
